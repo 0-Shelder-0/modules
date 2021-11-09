@@ -10,4 +10,9 @@ public abstract class AbstractDirectoryFileModule implements FileModule {
     public boolean supportExtension(File file) {
         return file.isDirectory();
     }
+
+    @Override
+    public String getTypeDescription() {
+        return "Каталог";
+    }
 }

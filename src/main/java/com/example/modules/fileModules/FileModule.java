@@ -1,12 +1,15 @@
 package com.example.modules.fileModules;
 
+import com.example.modules.exceptions.FileModuleException;
+
 import java.io.File;
-import java.io.IOException;
 
 public interface FileModule {
     boolean supportExtension(File file);
 
+    String getTypeDescription();
+
     String getDescription();
 
-    String getResult(File file, String arg) throws IOException;
+    String getResult(File file, String arg) throws FileModuleException;
 }

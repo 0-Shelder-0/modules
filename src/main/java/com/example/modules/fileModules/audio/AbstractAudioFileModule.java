@@ -15,4 +15,9 @@ public abstract class AbstractAudioFileModule implements FileModule {
         String extension = FilenameUtils.getExtension(file.getName());
         return file.isFile() && _extensions.contains(extension);
     }
+
+    @Override
+    public String getTypeDescription() {
+        return "Аудио файл";
+    }
 }
